@@ -18,6 +18,7 @@
     "astro-icon": "^1.1.4",
     "astro-supabase": "^0.0.2",
     "responsive-image-astro": "^0.1.1",
+    "sharp": "^0.33.5",
     "typescript": "^5.7.2"
   },
   "devDependencies": {
