@@ -32,6 +32,9 @@ importers:
       astro-supabase:
         specifier: ^0.0.2
         version: 0.0.2(@supabase/supabase-js@2.46.2)(astro@5.0.0-beta.12(@types/node@22.10.1)(jiti@1.21.6)(rollup@4.27.4)(typescript@5.7.2)(yaml@2.6.1))
+      responsive-image-astro:
+        specifier: ^0.1.1
+        version: 0.1.1(astro@5.0.0-beta.12(@types/node@22.10.1)(jiti@1.21.6)(rollup@4.27.4)(typescript@5.7.2)(yaml@2.6.1))
       typescript:
         specifier: ^5.7.2
         version: 5.7.2
@@ -2084,6 +2087,11 @@ packages:
   resolve@1.22.8:
     resolution: {integrity: sha512-oKWePCxqpd6FlLvGV1VU0x7bkPmmCNolxzjMf4NczoDnQcIWrAF+cPtZn5i6n+RfD2d9i0tzpKnG6Yk168yIyw==}
     hasBin: true
+
+  responsive-image-astro@0.1.1:
+    resolution: {integrity: sha512-Mg3HYRQ8B7ZhTXivmW/KKqJIif61bCzHAkgRb15vApE77xZ79VponuvIZ7jROWvncAoCpa9M9YvGEqdJyN8jyg==}
+    peerDependencies:
+      astro: '>=3.0.0 <5.0.0'
 
   retext-latin@4.0.0:
     resolution: {integrity: sha512-hv9woG7Fy0M9IlRQloq/N6atV82NxLGveq+3H2WOi79dtIYWN8OaxogDm77f8YnVXJL2VD3bbqowu5E3EMhBYA==}
@@ -4932,6 +4940,10 @@ snapshots:
       is-core-module: 2.15.1
       path-parse: 1.0.7
       supports-preserve-symlinks-flag: 1.0.0
+
+  responsive-image-astro@0.1.1(astro@5.0.0-beta.12(@types/node@22.10.1)(jiti@1.21.6)(rollup@4.27.4)(typescript@5.7.2)(yaml@2.6.1)):
+    dependencies:
+      astro: 5.0.0-beta.12(@types/node@22.10.1)(jiti@1.21.6)(rollup@4.27.4)(typescript@5.7.2)(yaml@2.6.1)
 
   retext-latin@4.0.0:
     dependencies:

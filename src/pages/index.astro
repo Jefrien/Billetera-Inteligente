@@ -1,15 +1,31 @@
 ---
-import Layout from '../layouts/Layout.astro';
 import GuestLayout from "../layouts/GuestLayout.astro";
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import { ResponsiveImage } from "responsive-image-astro";
+import LoginImage from '../assets/images/login.jpg';
+import { Icon } from 'astro-icon/components'
 ---
 
 <GuestLayout title="Ingresar - Billetera Inteligente">
-	<div>
-		<button class="btn btn-primary">
-			Hola mundo
-		</button>
+	<div class="flex h-full flex-wrap md:flex-nowrap ">
+		<div class="w-full md:w-1/3 xl:w-1/3 2xl:w-2/5 h-full absolute md:relative md:top-0 md:left-0 md:bottom-0 md:right-0 xl:relative xl:top-0 xl:left-0 xl:bottom-0 xl:right-0 2xl:relative 2xl:top-0 2xl:left-0 2xl:bottom-0 2xl:right-0">
+			<ResponsiveImage src={LoginImage} breakpoints={[200, 400, 600, 800]}
+							 class="w-full h-full object-cover"
+							 alt="Login Image" format="avif" />
+			<div class="absolute top-0 left-0 w-full h-full bg-black/60 backdrop-blur flex flex-col justify-center items-center">
+
+			</div>
+		</div>
+		<div class="flex px-4 flex-col w-full md:w-2/3 xl:w-2/3 2xl:w-4/5 h-full justify-center items-center relative top-0 left-0 bottom-0 right-0  text-neutral-200" >
+			<h1 class="text-4xl text-center md:text-5xl font-bold mb-4">
+				Billetera Inteligente
+			</h1>
+			<p class="text-2xl mb-6">Ingresa a tu cuenta</p>
+
+			<button class="btn bg-white text-base text-black hover:bg-neutral-100">
+				<Icon class="w-5 h-5" name="tabler:brand-google-filled" />
+				Ingresar con Google
+			</button>
+
+		</div>
 	</div>
 </GuestLayout>
