@@ -11,9 +11,7 @@ export async function login(formData: FormData) {
     const {data, error} = await supabase.auth.signInWithOAuth({
         provider: 'google',
         options: {
-            redirectTo: process.env.DEV === "true"
-                ? "http://localhost:3000/auth/callback"
-                : "https://billetera-inteligente.vercel.app/auth/callback",
+            redirectTo: process.env.REDIRECT_CALLBACK_URL
         },
     })
 
