@@ -1,5 +1,4 @@
 import "./globals.css";
-import '../app/fonts/css/all.min.css';
 import ThemeToggler from "../components/global/ThemeToggler";
 
 export const metadata = {

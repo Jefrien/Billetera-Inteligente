@@ -11,7 +11,7 @@ export async function login(formData: FormData) {
     const {data, error} = await supabase.auth.signInWithOAuth({
         provider: 'google',
         options: {
-            redirectTo: process.env.REDIRECT_CALLBACK_URL
+            redirectTo: process.env.NEXT_REDIRECT_CALLBACK_URL
         },
     })
 

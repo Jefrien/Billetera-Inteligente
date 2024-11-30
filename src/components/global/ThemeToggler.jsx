@@ -1,6 +1,8 @@
 'use client';
 import { Button } from '../../components/material'
 import { useEffect, useState } from 'react';
+import SunIcon from "../../assets/icons/sun.svg";
+import MoonIcon from "../../assets/icons/moon.svg";
 
 export default function ThemeToggler() {
 
@@ -10,7 +12,7 @@ export default function ThemeToggler() {
         e.preventDefault()
 
         localStorage.setItem('theme', isDark ? 'light' : 'dark')
-        setIsDark(!isDark)   
+        setIsDark(!isDark)
         document.documentElement.classList.toggle('dark', !isDark)
     }
 
@@ -21,7 +23,7 @@ export default function ThemeToggler() {
             localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
         )
 
-        // get the current theme        
+        // get the current theme
         const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
         localStorage.setItem('theme', currentTheme)
         setIsDark(currentTheme === 'dark')
@@ -30,10 +32,10 @@ export default function ThemeToggler() {
     }, [])
 
     return (
-        <div className='absolute right-4 top-4'>
-            <Button onClick={handleClickToggler} variant='text' className='rounded-full h-12 w-12 p-0 text-lg text-black dark:text-white' >
-               { !isDark ? <i className="fa-solid fa-sun" ></i> : <i className="fa-solid fa-moon" ></i> }
+        <div className='absolute right-4 top-4 z-20'>
+            <Button onClick={handleClickToggler} variant='text' className='rounded-full h-12 w-12 p-0 text-lg text-black dark:text-white flex items-center justify-center fill-white' >
+               { !isDark ? <SunIcon /> : <MoonIcon /> }
             </Button>
         </div>
-    ) 
+    )
 }
