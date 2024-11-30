@@ -13,7 +13,7 @@ export async function login(formData: FormData) {
         options: {
             redirectTo: process.env.DEV
                 ? "http://localhost:3000/auth/callback"
-                : "https://astro-supabase-auth.vercel.app/auth/callback",
+                : "https://billetera-inteligente.vercel.app/auth/callback",
         },
     })
 
