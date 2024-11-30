@@ -1,29 +1,26 @@
 {
-  "name": "billetera-inteligente",
-  "type": "module",
-  "version": "0.0.1",
+  "name": "billetera-inteligente-next",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro check && astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.4",
-    "@astrojs/tailwind": "^5.1.2",
-    "@astrojs/vercel": "^7.8.2",
+    "@material-tailwind/react": "^2.1.10",
     "@supabase/ssr": "^0.5.2",
     "@supabase/supabase-js": "^2.46.2",
-    "astro": "5.0.0-beta.12",
-    "astro-icon": "^1.1.4",
-    "astro-supabase": "^0.0.2",
-    "responsive-image-astro": "^0.1.1",
-    "sharp": "^0.33.5",
-    "typescript": "^5.7.2"
+    "next": "15.0.3",
+    "react": "19.0.0-rc-66855b96-20241106",
+    "react-dom": "19.0.0-rc-66855b96-20241106"
   },
   "devDependencies": {
-    "@iconify-json/tabler": "^1.2.8",
-    "daisyui": "^4.12.14",
-    "tailwindcss": "^3.4.15"
+    "@types/react": "18.3.12",
+    "eslint": "^8",
+    "eslint-config-next": "15.0.3",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1"
   }
 }
