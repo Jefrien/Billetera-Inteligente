@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, {useEffect} from "react";
 import {
     Card,
     Typography,
@@ -11,6 +11,7 @@ import BillsIcon from '../../../../public/icons/bills.svg'
 import IncomeIcon from '../../../../public/icons/income.svg'
 import CategoryIcon from '../../../../public/icons/category.svg'
 import {useDrawerStore} from "../../../store/drawer";
+import {usePathname} from "next/navigation";
 
 export default function NavDrawer() {
     const { isOpen, closeDrawer } = useDrawerStore()
@@ -45,6 +46,7 @@ export default function NavDrawer() {
             icon: <CategoryIcon />,
         },
     ]
+
 
     return (
         <>

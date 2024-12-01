@@ -23,3 +23,11 @@ export async function login(formData) {
 
     redirect(data.url)
 }
+
+export async function logout() {
+    const supabase = await createClient()
+
+    await supabase.auth.signOut()
+
+    redirect('/')
+}

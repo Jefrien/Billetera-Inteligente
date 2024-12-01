@@ -32,10 +32,8 @@ export default function ThemeToggler() {
     }, [])
 
     return (
-        <div className='absolute right-4 top-3 z-20'>
             <Button onClick={handleClickToggler} variant='text' className='rounded-full h-12 w-12 p-0 text-lg text-black dark:text-white flex items-center justify-center fill-white' >
                { !isDark ? <SunIcon /> : <MoonIcon /> }
             </Button>
-        </div>
     )
 }
