@@ -10,10 +10,10 @@ import DashboardIcon from '../../../../public/icons/dashboard.svg'
 import BillsIcon from '../../../../public/icons/bills.svg'
 import IncomeIcon from '../../../../public/icons/income.svg'
 import CategoryIcon from '../../../../public/icons/category.svg'
-import {useDrawer} from "../../../utils/useDrawer";
+import {useDrawerStore} from "../../../store/drawer";
 
 export default function NavDrawer() {
-    const { closeDrawer, isOpen } = useDrawer()
+    const { isOpen, closeDrawer } = useDrawerStore()
 
     const menuItems = [
         {
@@ -63,7 +63,7 @@ export default function NavDrawer() {
                     <Typography variant="h5" className='text-gray-900 text-justify  dark:text-white uppercase tracking-widest  '>
                         Billetera<br />Inteligente
                     </Typography>
-                    {isOpen ? 'open' : 'close'}
+
                 </div>
                 <List>
                     { menuItems.map((item, index) => <NavItem key={index} icon={item.icon} text={item.text} href={item.href} />) }

@@ -4,16 +4,17 @@ import {
     Navbar,
 } from "../../material";
 import MenuIcon from '../../../../public/icons/menu.svg';
-import {useDrawer} from "../../../utils/useDrawer";
+import {useDrawerStore} from "../../../store/drawer";
 
 export default function NavBar() {
-    const { toggleDrawer } = useDrawer()
+    const { toggleDrawer } = useDrawerStore()
 
     return (
-        <Navbar fullWidth={true} className="mx-auto max-w-screen-xl px-4 py-2 lg:py-4  rounded-0 dark:bg-big-stone-900 border-0">
+        <Navbar fullWidth={true} className="w-full px-4 py-2 lg:py-4  rounded-0 dark:bg-big-stone-900 border-0 flex">
+            <div className='h-10 w-0'></div>
             <IconButton
                 onClick={toggleDrawer}
-                variant='text' className='text-black dark:text-white' size={'lg'}>
+                variant='text' className='text-black dark:text-white lg:hidden' size={'lg'}>
                 <MenuIcon className='w-8 h-8' />
             </IconButton>
         </Navbar>

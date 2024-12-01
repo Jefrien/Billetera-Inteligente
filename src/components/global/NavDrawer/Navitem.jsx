@@ -8,7 +8,7 @@ export default function NavItem({text, icon, href}) {
             {href ? (
                 <Link href={href}>
                     <ListItem
-                        className="font-bold hover:bg-blue-gray-50 mt-auto dark:hover:bg-white/10 dark:text-white focus:bg-blue-gray-900">
+                        className="font-bold hover:bg-blue-gray-50 mt-auto dark:hover:bg-white/10 dark:text-white focus:bg-blue-gray-50 dark:focus:bg-bg-blue-gray-900">
                         {icon && <ListItemPrefix>{icon}</ListItemPrefix>}
                         {text}
                     </ListItem>
