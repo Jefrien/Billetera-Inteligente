@@ -15,7 +15,7 @@ export default function Home() {
           />
 
           <div
-              className="flex px-4 flex-col w-full h-full justify-center items-center relative text-black dark:text-white z-10 bg-white/80 dark:bg-black/90 backdrop-blur-md">
+              className="flex px-4 flex-col w-full h-full justify-center items-center relative text-black dark:text-white z-10 bg-white/80 dark:bg-black/70 backdrop-blur-md">
               <h1 className="text-4xl text-center md:text-5xl font-bold mb-4">
                   Billetera Inteligente
               </h1>

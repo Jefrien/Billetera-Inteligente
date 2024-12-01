@@ -3,7 +3,7 @@ import {NextRequest, NextResponse} from "next/server";
 import {createClient} from "../../../utils/supabase/server";
 import {redirect} from "next/navigation";
 
-export async function GET(request: NextRequest) {
+export async function GET(request) {
     const cookieStore = await cookies()
     const supabase = await createClient()
 
