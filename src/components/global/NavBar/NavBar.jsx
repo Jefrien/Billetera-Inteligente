@@ -4,13 +4,10 @@ import {
     Navbar,
 } from "../../material";
 import MenuIcon from '../../../../public/icons/menu.svg';
-//import useDrawerStore from "../../../store/drawer";
+import {useDrawerStore} from "../../../store/drawer";
 
 export default function NavBar() {
-    //const { toggleDrawer } = useDrawerStore()
-    const toggleDrawer = () => {
-        console.log('toggle')
-    }
+    const { toggleDrawer } = useDrawerStore()
 
     return (
         <Navbar fullWidth={true} className="w-full px-4 py-2 lg:py-4  rounded-0 dark:bg-big-stone-900 border-0 flex">
