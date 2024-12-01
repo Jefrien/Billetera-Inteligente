@@ -15,6 +15,8 @@ export async function login(formData) {
         },
     })
 
+    console.log('redirecting to', process.env.NEXT_REDIRECT_CALLBACK_URL)
+
     if (error) {
         redirect('/')
     }
