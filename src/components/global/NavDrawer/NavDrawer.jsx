@@ -10,10 +10,12 @@ import DashboardIcon from '../../../../public/icons/dashboard.svg'
 import BillsIcon from '../../../../public/icons/bills.svg'
 import IncomeIcon from '../../../../public/icons/income.svg'
 import CategoryIcon from '../../../../public/icons/category.svg'
-import {useDrawerStore} from "../../../store/drawer";
 
 export default function NavDrawer() {
-    const { isOpen, closeDrawer } = useDrawerStore()
+    const [ isOpen, setDrawerOpen ] = React.useState(false);
+
+    const openDrawer = () => setDrawerOpen(true);
+
 
     const menuItems = [
         {

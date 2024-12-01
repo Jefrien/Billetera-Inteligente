@@ -3,7 +3,7 @@ import Image from "next/image";
 import LoginImage from "../../public/images/login.jpg";
 import { login } from './auth/actions'
 import GoogleIcon from '../assets/icons/google.svg'
-import ThemeToggler from "@/components/global/ThemeToggler";
+import ThemeToggler from "../components/global/ThemeToggler";
 export default function Home() {
   return (
       <div className="flex h-screen justify-center items-center ">
