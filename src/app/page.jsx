@@ -1,4 +1,6 @@
-import { Button } from '../components/material'
+import dynamic from 'next/dynamic'
+const Button = dynamic(() => import('../components/material').then(mod => mod.Button))
+//import { Button } from '../components/material'
 import Image from "next/image";
 import LoginImage from "../../public/images/login.jpg";
 import { login } from './auth/actions'

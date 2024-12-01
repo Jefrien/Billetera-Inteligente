@@ -1,6 +1,9 @@
+import analyzer from '@next/bundle-analyzer';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     experimental: {
+        nextScriptWorkers: true,
         turbo: {
             rules: {
                 '*.svg': {
@@ -34,4 +37,8 @@ const nextConfig = {
     },
 };
 
-export default nextConfig;
+const withBundleAnalyzer = analyzer({
+    enabled: process.env.ANALYZE === 'true',
+})
+
+export default withBundleAnalyzer(nextConfig);
