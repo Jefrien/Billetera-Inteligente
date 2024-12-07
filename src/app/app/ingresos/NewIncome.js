@@ -17,7 +17,11 @@ export default function NewIncomeDrawer() {
 
     return (
         <React.Fragment>
-            <Drawer placement={'right'} open={isNewIncomeOpen} onClose={closeDrawer} className="p-4 dark:bg-big-stone-900 text-white">
+            <Drawer
+                overlayProps={{
+                    className: 'fixed'
+                }}
+                placement={'right'} open={isNewIncomeOpen} onClose={closeDrawer} className="p-4 dark:bg-big-stone-900 text-white">
                 <div className="mb-6 flex items-center justify-between">
                     <Typography variant="h5" className='text-blue-gray-900 dark:text-blue-gray-100'>
                         Nuevo Ingreso

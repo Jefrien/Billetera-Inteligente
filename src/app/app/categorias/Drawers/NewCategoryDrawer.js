@@ -6,10 +6,8 @@ import {
     IconButton,
 } from "@material-tailwind/react";
 import React from "react";
-import {useDrawerStore} from "../../../store/drawer";
-import {useNewIncomeStore} from "../../../store/incomes";
-import {ThemedButton} from "../../../components/material";
-import {useNewCategoryStore} from "../../../store/categories";
+import {ThemedButton} from "../../../../components/material";
+import {useNewCategoryStore} from "../../../../store/categories";
 
 export default function NewCategoryDrawer() {
 
@@ -17,7 +15,11 @@ export default function NewCategoryDrawer() {
 
     return (
         <React.Fragment>
-            <Drawer placement={'right'} open={isNewCategoryOpen} onClose={closeDrawer} className="p-4 dark:bg-big-stone-900 text-white">
+            <Drawer
+                overlayProps={{
+                    className: 'fixed'
+                }}
+                placement={'right'} open={isNewCategoryOpen} onClose={closeDrawer} className="p-4 dark:bg-big-stone-900 text-white">
                 <div className="mb-6 flex items-center justify-between">
                     <Typography variant="h5" className='text-blue-gray-900 dark:text-blue-gray-100'>
                         Nueva Categoria

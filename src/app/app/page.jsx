@@ -1,6 +1,7 @@
 import { Card, Typography, CardBody } from "./../../components/material";
 import IncomesWidget from "./components/IncomesWidget";
 import MainChart from "./components/MainChart";
+import CategoriesWidget from "./categorias/CategoriesWidget";
 
 export default function App() {
   const chartValues = [
@@ -25,8 +26,8 @@ export default function App() {
   ];
 
   return (
-    <div className="p-6">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div className="p-4 md:p-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
         <div>
           <Card>
             <CardBody className="p-4 bg-white dark:bg-big-stone-900">
@@ -40,6 +41,11 @@ export default function App() {
             </CardBody>
           </Card>
         </div>
+
+        <CategoriesWidget />
+
+        <IncomesWidget />
+
         <IncomesWidget />
       </div>
     </div>

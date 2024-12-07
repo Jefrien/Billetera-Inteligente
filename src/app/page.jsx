@@ -1,8 +1,5 @@
-import { Button } from '../components/material';
 import Image from "next/image";
 import LoginImage from "../../public/images/login.jpg";
-import {login} from './auth/actions'
-import GoogleIcon from '../assets/icons/google.svg'
 import ThemeToggler from "../components/global/ThemeToggler";
 import LoginButton from "./components/LoginButton";
 

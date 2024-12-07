@@ -1,7 +1,10 @@
 import { Card, Typography, CardBody } from "../../../components/material";
+import {getCategories} from "./actions";
 
-export default function Categories() {
+export default async function Categories() {
   const TABLE_HEAD = ["Titulo"];
+
+
 
   return (
     <div className="p-6">

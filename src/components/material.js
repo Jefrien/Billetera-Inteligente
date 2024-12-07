@@ -9,6 +9,13 @@ import {
   Typography,
   CardBody,
   Tooltip,
+  Dialog,
+  DialogHeader,
+  DialogBody,
+  DialogFooter,
+  Popover,
+  PopoverHandler,
+  PopoverContent,
 } from "@material-tailwind/react";
 import {useEffect, useState} from "react";
 import {useThemeStore} from "../store/theme";
@@ -25,7 +32,6 @@ const ThemedButton = ({ children, colors, ...props }) => {
       }
 
         if (colors) {
-            console.log('currentTheme', currentTheme, colors, colors[currentTheme])
             setColorButton(colors[currentTheme])
             return
         }
@@ -51,5 +57,12 @@ export {
   Typography,
   CardBody,
   Tooltip,
-  ThemedButton
+  ThemedButton,
+  Dialog,
+  DialogHeader,
+  DialogBody,
+  DialogFooter,
+  Popover,
+  PopoverHandler,
+  PopoverContent,
 };

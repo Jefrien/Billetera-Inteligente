@@ -120,9 +120,9 @@ export default function MainChart({ data }) {
           </div>
 
         </div>
-        <div className="pl-10 grid grid-cols-3 gap-4 xl:gap-6">
+        <div className="pl-10 grid grid-cols-3 gap-4 xl:gap-6 pt-1">
           {itemsChart.map((item, index) => (
-              <span key={'labels_'+index} className="text-center mt-1 w-full block dark:text-white">
+              <span key={'labels_'+index} className="text-[11px] md:text-xs text-center mt-1 w-full block dark:text-white">
                 {item.label}
               </span>
           ))}
