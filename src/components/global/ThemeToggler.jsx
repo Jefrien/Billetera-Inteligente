@@ -3,10 +3,12 @@ import { Button } from '../../components/material'
 import { useEffect, useState } from 'react';
 import SunIcon from "../../assets/icons/sun.svg";
 import MoonIcon from "../../assets/icons/moon.svg";
+import {useThemeStore} from "../../store/theme";
 
 export default function ThemeToggler() {
 
     const [ isDark, setIsDark ] = useState(false)
+    const { setTheme } = useThemeStore()
 
     const handleClickToggler = (e) => {
         e.preventDefault()
@@ -14,6 +16,7 @@ export default function ThemeToggler() {
         localStorage.setItem('theme', isDark ? 'light' : 'dark')
         setIsDark(!isDark)
         document.documentElement.classList.toggle('dark', !isDark)
+        setTheme(isDark ? 'light' : 'dark')
     }
 
     useEffect(() => {
@@ -27,6 +30,7 @@ export default function ThemeToggler() {
         const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
         localStorage.setItem('theme', currentTheme)
         setIsDark(currentTheme === 'dark')
+        setTheme(currentTheme)
 
 
     }, [])
