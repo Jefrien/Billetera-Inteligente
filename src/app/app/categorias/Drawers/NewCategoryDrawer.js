@@ -1,17 +1,49 @@
 'use client'
 import {
     Drawer,
-    Button,
     Typography,
-    IconButton,
+    IconButton, Option,
 } from "@material-tailwind/react";
-import React from "react";
-import {ThemedButton} from "../../../../components/material";
+import React, {useEffect, useState, useActionState} from "react";
+import {ThemedButton, ThemedSelect, ThemedTextField} from "../../../../components/material";
 import {useNewCategoryStore} from "../../../../store/categories";
+import {createCategory, getCategories} from "../actions";
+import LoaderIcon from "../../../../../public/icons/loader.svg";
 
 export default function NewCategoryDrawer() {
 
     const {isNewCategoryOpen, closeDrawer} = useNewCategoryStore();
+    const [categories, setCategories] = useState([])
+    const [state, formAction, isPending] = useActionState(async (prevState, formData) => {
+        try {
+        const results = await createCategory(prevState, formData);
+        if (results.success === true) {
+            closeDrawer()
+        } else {
+            throw new Error(results.message)
+        }
+
+        } catch (error) {
+            return {
+                success: false,
+                message: error.message
+            };
+        }
+    }, null);
+
+
+    useEffect(() => {
+        getCategories().then((response) => {
+            let cats = response
+
+            // add to first position
+            cats.unshift({id: 0, title: '--'})
+
+            setCategories(cats)
+        })
+    }, []);
+
+
 
     return (
         <React.Fragment>
@@ -41,18 +73,43 @@ export default function NewCategoryDrawer() {
                         </svg>
                     </IconButton>
                 </div>
-                <Typography className="mb-8 pr-4 font-normal text-gray-900 dark:text-gray-100">
-                    Ingrese los datos del nuevo ingreso
-                </Typography>
-                <div className="flex gap-2">
-                    <ThemedButton size="sm" variant="outlined" colors={{
-                        light: 'blue',
-                        dark: 'white'
-                    }}>
-                        Documentation
+
+                <form action={formAction}>
+                    <ThemedTextField
+                        label='Titulo'
+                        name='title'
+                    />
+
+                    <div className="mt-4">
+                        <ThemedSelect label='Categoría Padre' name='category'>
+                            {categories.map((category) => (
+                                <Option key={category.id}>{category.title}</Option>
+                            ))}
+                        </ThemedSelect>
+                    </div>
+
+                    <p aria-live="polite" className="p-2 text-red-400" role="status">
+                        {state?.message}
+                    </p>
+
+                    <ThemedButton
+                        colors={{
+                            light: 'blue',
+                            dark: 'blue'
+                        }}
+                        className='w-full mt-4'
+                        type='submit'
+                    >
+                        Guardar
                     </ThemedButton>
-                    <Button size="sm">Get Started</Button>
-                </div>
+                </form>
+
+                {isPending && (
+                    <div
+                        className='absolute left-0 top-0 z-10 backdrop-blur bg-black/50 w-full h-full flex items-center justify-center'>
+                        <LoaderIcon className='animate-spin h-10 w-10 text-white'/>
+                    </div>
+                )}
             </Drawer>
         </React.Fragment>
     )

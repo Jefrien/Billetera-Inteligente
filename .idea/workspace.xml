@@ -5,25 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b8198143-b028-4800-86a1-a3ad119b7e32" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/public/icons/edit.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/trash.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/app/categorias/CategoriesWidget.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/app/categorias/Modals/DefaultsCategoriesModal.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/app/categorias/actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/app/categorias/components/DeleteButtonPopover.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/app/categorias/components/NewButton.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/app/categorias/components/CategoriesSelect.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ui/Select.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ui/TextField.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app/categorias/NewCategoryDrawer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/categorias/Drawers/NewCategoryDrawer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app/categorias/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/categorias/page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app/components/IncomesWidget.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/components/IncomesWidget.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app/categorias/Drawers/NewCategoryDrawer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/categorias/Drawers/NewCategoryDrawer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app/categorias/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/categorias/actions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app/components/MainChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/components/MainChart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app/ingresos/NewIncome.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/ingresos/NewIncome.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app/loading.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/loading.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/page.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/material.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/material.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/categories.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/categories.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,21 +55,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Jefrien/WebstormProjects/Billetera-Inteligente/src/app/app/categorias&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Jefrien\\WebstormProjects\\Billetera-Inteligente\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/Jefrien/WebstormProjects/Billetera-Inteligente/src/app/app/categorias",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.dev.executor": "Run",
+    "ts.external.directory.path": "/Users/jefrien/WebstormProjects/Billetera-Inteligente/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Jefrien\WebstormProjects\Billetera-Inteligente\src\app\app\categorias" />

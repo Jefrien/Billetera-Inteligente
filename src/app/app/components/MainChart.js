@@ -10,9 +10,6 @@ export default function MainChart({ data }) {
 
   const fillRealData = async () => {
     const totalItems = data.length;
-
-    // each items and wait 100ms each one
-    // to simulate a real time chart
     for (let i = 0; i < totalItems; i++) {
       const item = data[i];
       setItemsChart((prev) => {
